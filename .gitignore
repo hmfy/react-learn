@@ -17,8 +17,11 @@ yarn-error.log*
 pnpm-debug.log*
 
 .cache/
+.parcel-cache/
 .vite/
 .turbo/
 
 .idea/
 .vscode/
+
+pnpm-lock.yaml

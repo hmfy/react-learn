@@ -173,3 +173,6 @@ Codex 仅作为辅助工具，而不是主导开发。
 - 易于下一步扩展
 
 本项目的标准不是“最专业”，而是：清晰、正确、可学习
+
+# 依赖安装
+- pnpm install --registry=https://registry.npmmirror.com

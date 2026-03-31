@@ -8,11 +8,13 @@ import {
   setMenuList,
   setActiveMenu
 } from "../store/menuSlice";
+import { useNavigate } from "react-router";
 
 function SideLeft() {
   const menuList = useSelector(selectMenuList);
   const activeMenu = useSelector(selectActiveMenu);
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   useEffect(() => {
     // 模拟菜单请求
     setTimeout(() => {
@@ -27,7 +29,11 @@ function SideLeft() {
   }, []);
 
   const changeMenu = (item) => {
+    // 设置激活菜单状态
     dispatch(setActiveMenu(item));
+
+    // 切换路由页面
+    navigate(item.path)
   };
   return (
     <div className="w-[245] h-full">
